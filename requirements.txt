@@ -1,0 +1,5 @@
+PyPDF2==1.26.0
+python-nmap==0.6.1
+python-whois==0.6.2
+pygeoip==0.3.2
+dnspython==1.14.0

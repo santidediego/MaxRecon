@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 '''
-
-
+Author: Santiago de Diego
 '''
 
 import dns
@@ -99,7 +98,7 @@ def dns_query():
     except:
         print("\nYour domain´s name hasn´t got AAAA register or is empty\n")
 
-    #Transferencia de zona
+    #To do: zone Transfer
     print("\n<Continue>\n")
     input()
 
@@ -120,7 +119,7 @@ def geolocate():
     address=ask_for_address()
     try:
         print("Country: "+country.country_name_by_addr(address) + "Code: "+country.country_code_by_addr(address))
-        print("City: "+city.record_by_addr(address))
+        print("City: "+str(city.record_by_addr(address)))
     except:
         print("No valid IP, something was wrong")
         return
@@ -237,7 +236,7 @@ def scan():
             break
         if case('3'):
             try:
-                print("Write your nmap scan. Ex: nmap -sU 8.8.8.8")
+                print("Write your nmap scan. Ex: nmap -sU scanme.nmap.org")
                 scan=input()
                 try:
                     os.system(scan)
@@ -286,7 +285,7 @@ def main():
             if case('7'):
                 pass
                 break
-            if case(): # default, could also just omit condition or 'if True'
+            if case(): # default
                 option=0
 
 main()
