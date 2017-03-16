@@ -1,16 +1,10 @@
 #! /usr/bin/env python
 '''
 Author: Santiago de Diego
+Python: python 3.5
 '''
 
-import dns
-import dns.resolver
-import whois
-import pygeoip
-from PyPDF2 import PdfFileReader, PdfFileWriter
-import sys
-import nmap
-import os
+from imports import *
 
 # This class provides the functionality we want. You only need to look at
 # this if you want to know how this works. It only needs to be defined
@@ -250,9 +244,21 @@ def scan():
 
     print("\n<Continue>\n")
     input()
+
+
+def cam():
+    print("Insert a valid host or network: ")
+    address=input()
+    try:
+        cam_detector(address)
+    except:
+        print("Remind you must run this program as root")
+    print("\n<Continue>\n")
+    input()
+
 def main():
     option=0
-    while option!='7':
+    while option!='8':
         print("\nChoose an option:")
         print("1) Ask the DNS Server:")
         print("2) WHOIS Information:")
@@ -260,7 +266,8 @@ def main():
         print("4) Google Hacking:")
         print("5) Metadata analysis in PDF files")
         print("6) Scan the target")
-        print("7) Exit")
+        print("7) Scan for webcams")
+        print("8) Exit")
         print("Choose an option: ")
         option=input()
         for case in switch(option):
@@ -283,6 +290,9 @@ def main():
                 scan()
                 break
             if case('7'):
+                cam()
+                break
+            if case('8'):
                 pass
                 break
             if case(): # default

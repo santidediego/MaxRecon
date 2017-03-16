@@ -1,0 +1,43 @@
+
+#! /usr/bin/env python
+'''
+Author: Santiago de Diego
+
+This program scans a network looking for security cameras which usually run in ports specified
+You can set the variable "ports" in order to modify this
+Ports have been extracted from Shodan
+
+'''
+
+import sys
+import nmap
+
+
+def cam_detector(net):
+    ports='80,81,82,88,1234,7547,8000,8080'
+    objetives=[]
+    print("Hosts selected: "+net)
+    nm=nmap.PortScanner()
+    results=nm.scan(hosts=net, arguments='-sV -O -sT -p '+ports) #Scanning the most common ports for cams
+    print("Scanning with conf: "+nm.command_line()+"\n")
+    for host in nm.all_hosts():
+        for proto in nm[host].all_protocols():
+            lport = nm[host][proto].keys()
+            for port in lport:
+                if nm[host][proto][port]['state']=='opened':
+                    objetives.append(host)
+                    break
+
+        for host in objetives:
+            print('----------------------------------------------------')
+            print('Host : %s (%s)' % (host, nm[host].hostname()))
+            print('State : %s' % nm[host].state())
+            for proto in nm[host].all_protocols():
+               print('----------')
+               print('Protocol : %s' % proto)
+               lport = nm[host][proto].keys()
+               for port in lport:
+                   print ('port : %s\tstate : %s' % (port, nm[host][proto][port]['state']))
+
+        if len(objetives)==0:
+            print("\nNo security cameras were found in this network, you might add more ports\n")
