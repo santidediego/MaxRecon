@@ -8,9 +8,7 @@ You can set the variable "ports" in order to modify this
 Ports have been extracted from Shodan
 
 '''
-
-import sys
-import nmap
+from imports import *
 
 
 def cam_detector(net):
@@ -19,7 +17,6 @@ def cam_detector(net):
     print("Hosts selected: "+net)
     nm=nmap.PortScanner()
     results=nm.scan(hosts=net, arguments='-sV -O -sT -p '+ports) #Scanning the most common ports for cams
-    print("Scanning with conf: "+nm.command_line()+"\n")
     for host in nm.all_hosts():
         for proto in nm[host].all_protocols():
             lport = nm[host][proto].keys()
@@ -41,3 +38,12 @@ def cam_detector(net):
 
         if len(objetives)==0:
             print("\nNo security cameras were found in this network, you might add more ports\n")
+
+def cam():
+    address=ask_for_network()
+    try:
+        cam_detector(address)
+    except:
+        print("Remind you must run this program as root")
+    print("\n<Continue>\n")
+    input()
