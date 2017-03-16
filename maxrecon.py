@@ -36,10 +36,12 @@ def domain_or_ip():
     option=input()
     for case in switch(option):
         if case('1'):
-            ask_for_address()
+            address=ask_for_address()
+            return address
             break
         if case('2'):
-            ask_for_domain()
+            address=ask_for_domain()
+            return address
             break
         if case():
             print("Please select a correct option")
@@ -132,24 +134,25 @@ def googlehacking():
     print("5) All")
     print("Choose an option: ")
     option=input()
+    print(address)
     for case in switch(option):
         if case('1'):
-            os.system("python scripts/googleDB-tool.py vulnerabilities.txt -s "+address+" -o reports/output_vul.txt ")
+            command=os.system("python scripts/googleDB-tool.py vulnerabilities.txt -s "+address+" -o reports/output_vul.txt ")
             break
         if case('2'):
-            os.system("python scripts/googleDB-tool.py login_pages.txt -s "+address+" -o reports/output_logins.txt ")
+            command=os.system("python scripts/googleDB-tool.py login_pages.txt -s "+address+" -o reports/output_logins.txt ")
             break
         if case('3'):
-            os.system("python scripts/googleDB-tool.py interesting_directories.txt -s "+address+" -o reports/output_directories.txt ")
+            command=os.system("python scripts/googleDB-tool.py interesting_directories.txt -s "+address+" -o reports/output_directories.txt ")
             break
         if case('4'):
-            os.system("python scripts/googleDB-tool.py sql_injection_list.txt -s "+address+" -o reports/output_sql-injection.txt ")
+            command=os.system("python scripts/googleDB-tool.py sql_injection_list.txt -s "+address+" -o reports/output_sql-injection.txt ")
             break
         if case('5'):
-            os.system("python scripts/googleDB-tool.py vulnerabilities.txt -s "+address+" -o reports/output_vul.txt ")
-            os.system("python scripts/googleDB-tool.py login_pages.txt -s "+address+" -o reports/output_logins.txt ")
-            os.system("python scripts/googleDB-tool.py interesting_directories.txt -s "+address+" -o reports/output_directories.txt ")
-            os.system("python scripts/googleDB-tool.py sql_injection_list.txt -s "+address+" -o reports/output_sql-injection.txt ")
+            command=os.system("python scripts/googleDB-tool.py vulnerabilities.txt -s "+address+" -o reports/output_vul.txt ")
+            command=os.system("python scripts/googleDB-tool.py login_pages.txt -s "+address+" -o reports/output_logins.txt ")
+            command=os.system("python scripts/googleDB-tool.py interesting_directories.txt -s "+address+" -o reports/output_directories.txt ")
+            command=os.system("python scripts/googleDB-tool.py sql_injection_list.txt -s "+address+" -o reports/output_sql-injection.txt ")
             break
         if case():
             print("Please, select a correct option")
@@ -168,8 +171,10 @@ def metadata():
     metadatas=pdfFile.getDocumentInfo()
     print("\nMetadatas:")
     print("----------------------------")
-    for data in metadatas:
-        print("[+]"+data+ ":"+metadatas[data])
+    #metadatas is none, check first
+    if(metadatas is not None):
+        for data in metadatas:
+            print("[+]"+data+ ":"+metadatas[data])
 
     print("\n<Continue>\n")
     input()
