@@ -1,5 +1,17 @@
 from imports import *
 
+def show_options():
+        print("\nChoose an option:")
+        print("1) Ask the DNS Server:")
+        print("2) WHOIS Information:")
+        print("3) Geolocate the target:")
+        print("4) Google Hacking:")
+        print("5) Metadata analysis in PDF files")
+        print("6) Scan the target")
+        print("7) Scan for webcams")
+        print("8) Exit")
+        print("Choose an option: ")
+
 def domain_or_ip():
     print("What do you want to use?")
     print("1) IP")
