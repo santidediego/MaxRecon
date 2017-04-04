@@ -11,5 +11,5 @@ def geolocate():
     except:
         print("No valid IP, something was wrong")
         return
-    print("\n<Continue>\n")
+    print("\n<Enter>\n")
     input()

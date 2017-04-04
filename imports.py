@@ -6,7 +6,6 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import sys
 import nmap
 import os
-from classes.switch import *
 from modules.interaction import *
 from modules.geolocate import *
 from modules.dns_query import *

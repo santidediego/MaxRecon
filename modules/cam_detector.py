@@ -45,5 +45,5 @@ def cam():
         cam_detector(address)
     except:
         print("Remind you must run this program as root")
-    print("\n<Continue>\n")
+    print("\n<Enter>\n")
     input()

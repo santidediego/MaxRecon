@@ -11,32 +11,18 @@ def main():
     while option!='8':
         show_options()
         option=input()
-        for case in switch(option):
-            if case('1'):
-                dns_query()
-                break
-            if case('2'):
-                whois_query()
-                break
-            if case('3'):
-                geolocate()
-                break
-            if case('4'):
-                googlehacking()
-                break
-            if case('5'):
-                metadata()
-                break
-            if case('6'):
-                scan()
-                break
-            if case('7'):
-                cam()
-                break
-            if case('8'):
-                pass
-                break
-            if case(): # default
-                option=0
-
+        if option=='1':
+            dns_query()
+        elif option=='2':
+            whois_query()
+        elif option=='3':
+            geolocate()
+        elif option=='4':
+            googlehacking()
+        elif option=='5':
+            metadata()
+        elif option=='6':
+            scan()
+        elif option=='7':
+            cam()
 main()

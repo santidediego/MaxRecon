@@ -37,5 +37,5 @@ def googlehacking():
             print("Please, select a correct option")
             return
     print("\nFile(s) correctly saved in reports/")
-    print("\n<Continue>\n")
+    print("\n<Enter>\n")
     input()

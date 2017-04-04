@@ -67,5 +67,5 @@ def scan():
         if case():
             print("Please, select a valid option")
 
-    print("\n<Continue>\n")
+    print("\n<Enter>\n")
     input()

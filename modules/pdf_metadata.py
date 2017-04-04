@@ -16,5 +16,5 @@ def metadata():
         for data in metadatas:
             print("[+]"+data+ ":"+metadatas[data])
 
-    print("\n<Continue>\n")
+    print("\n<Enter>\n")
     input()
