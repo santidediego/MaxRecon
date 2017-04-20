@@ -6,6 +6,8 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import sys
 import nmap
 import os
+import pprint
+from clint.textui import colored
 from modules.interaction import *
 from modules.geolocate import *
 from modules.dns_query import *

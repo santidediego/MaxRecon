@@ -6,7 +6,7 @@ def metadata():
     try:
         pdfFile=PdfFileReader(open(path,'rb'))
     except:
-        print("No pdf was found")
+        print("\nNo pdf was found")
         return
     metadatas=pdfFile.getDocumentInfo()
     print("\nMetadatas:")
@@ -16,5 +16,5 @@ def metadata():
         for data in metadatas:
             print("[+]"+data+ ":"+metadatas[data])
 
-    print("\n<Enter>\n")
+    print (colored.yellow("\n<Enter>\n"))
     input()

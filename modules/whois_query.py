@@ -9,5 +9,5 @@ def whois_query():
         print("Error reading your domain. Example: google.com")
         return
     print(search.text)
-    print("<Enter>")
+    print (colored.yellow("\n<Enter>\n"))
     input()

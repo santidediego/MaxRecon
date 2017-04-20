@@ -33,5 +33,5 @@ def dns_query():
         print("\nYour domain´s name hasn´t got AAAA register or is empty\n")
 
     #To do: zone Transfer
-    print("\n<Enter>\n")
+    print (colored.yellow("\n<Enter>\n"))
     input()

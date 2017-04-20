@@ -21,10 +21,13 @@ def cam_detector(net):
         for proto in nm[host].all_protocols():
             lport = nm[host][proto].keys()
             for port in lport:
-                if nm[host][proto][port]['state']=='opened':
+                if nm[host][proto][port]['state']=='open':
                     objetives.append(host)
                     break
 
+    if len(objetives)==0:
+        print(colored.red("\nNo security cameras were found in this network, you might add more ports\n"))
+    else:
         for host in objetives:
             print('----------------------------------------------------')
             print('Host : %s (%s)' % (host, nm[host].hostname()))
@@ -36,14 +39,11 @@ def cam_detector(net):
                for port in lport:
                    print ('port : %s\tstate : %s' % (port, nm[host][proto][port]['state']))
 
-        if len(objetives)==0:
-            print("\nNo security cameras were found in this network, you might add more ports\n")
-
 def cam():
     address=ask_for_network()
     try:
         cam_detector(address)
     except:
-        print("Remind you must run this program as root")
-    print("\n<Enter>\n")
+        print(colored.red("Error: Remind you must run this program as root"))
+    print (colored.yellow("\n<Enter>\n"))
     input()

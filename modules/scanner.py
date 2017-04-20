@@ -2,7 +2,7 @@ from imports import *
 
 def silent_scan(address):
     nm = nmap.PortScanner()
-    print("\nScanning, be patient\n")
+    print(colored.green("\nScanning, be patient\n"))
     nm.scan(hosts=address, arguments='-n -sS -sV')
     for host in nm.all_hosts():
         print('----------------------------------------------------')
@@ -18,7 +18,7 @@ def silent_scan(address):
 
 def intensive_scan(address):
     nm = nmap.PortScanner()
-    print("\nScanning, be patient\n")
+    print(colored.green("\nScanning, be patient\n"))
     nm.scan(hosts=address, arguments='-n -sT -sV')
     for host in nm.all_hosts():
         print('----------------------------------------------------')
@@ -38,34 +38,30 @@ def scan():
     print("2) Intensive Scan")
     print("3) Custom Scan (nmap must be installed)")
     option=input()
-    for case in switch(option):
-        if case('1'):
+    if option=='1':
+        try:
+            address=domain_or_ip()
+            silent_scan(address)
+        except:
+            print(colored.red("Error: Remind you must run this program as root"))
+    elif option=='2':
+        try:
+            address=domain_or_ip()
+            intensive_scan(address)
+        except:
+            print(colored.red("Error: Remind you must run this program as root"))
+    elif option=='3':
+        try:
+            print("Write your nmap scan. Ex: nmap -sU scanme.nmap.org")
+            scan=input()
             try:
-                address=domain_or_ip()
-                silent_scan(address)
+                os.system(scan)
             except:
-                print("Remind you must run this program as root")
-            break
-        if case('2'):
-            try:
-                address=domain_or_ip()
-                intensive_scan(address)
-            except:
-                print("Remind you must run this program as root")
-            break
-        if case('3'):
-            try:
-                print("Write your nmap scan. Ex: nmap -sU scanme.nmap.org")
-                scan=input()
-                try:
-                    os.system(scan)
-                except:
-                    print("Scan not correct")
-            except:
-                print("Remind you must run this program as root")
-            break
-        if case():
-            print("Please, select a valid option")
+                print("Scan not correct")
+        except:
+            print(colored.red("Error: Remind you must run this program as root"))
+    else:
+        print("\nPlease, select a valid option")
 
-    print("\n<Enter>\n")
+    print (colored.yellow("\n<Enter>\n"))
     input()

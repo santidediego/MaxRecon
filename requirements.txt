@@ -3,3 +3,5 @@ python-nmap==0.6.1
 python-whois==0.6.2
 pygeoip==0.3.2
 dnspython==1.14.0
+ipwhois==0.15.1
+clint==0.5.1

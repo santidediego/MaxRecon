@@ -12,6 +12,8 @@
 # ################################################################################
 # ## 1.0 initial release
 
+#This tools give us strings that we can put into Google to find diferent things
+
 from optparse import OptionParser
 import os.path
 import urllib.parse
