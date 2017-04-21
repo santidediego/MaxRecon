@@ -24,6 +24,7 @@ def cam_detector(net):
                 if nm[host][proto][port]['state']=='open':
                     objetives.append(host)
                     break
+            break
 
     if len(objetives)==0:
         print(colored.red("\nNo security cameras were found in this network, you might add more ports\n"))
