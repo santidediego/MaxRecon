@@ -7,6 +7,7 @@ import sys
 import nmap
 import os
 import pprint
+import shodan
 from clint.textui import colored
 from modules.interaction import *
 from modules.geolocate import *
@@ -16,3 +17,4 @@ from modules.pdf_metadata import *
 from modules.google_hacking import *
 from modules.cam_detector import *
 from modules.scanner import *
+from modules.shodan import *

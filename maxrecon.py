@@ -8,7 +8,7 @@ from imports import *
 
 def main():
     option=0
-    while option!='8':
+    while option!='9':
         show_options()
         option=input()
         if option=='1':
@@ -25,4 +25,6 @@ def main():
             scan()
         elif option=='7':
             cam()
+        elif option=='8':
+            shodan_hacking()
 main()

@@ -8,9 +8,21 @@ def show_options():
         print("4) Google Hacking:")
         print("5) Metadata analysis in PDF files")
         print("6) Scan the target")
-        print("7) Scan for webcams")
-        print("8) Exit")
+        print("7) Scan for webcams in a local network")
+        print("8) Shodan Hacking")
+        print("9) Exit")
         print("Choose an option: ")
+
+
+def init_shodan():
+    print("Welcome to Shodan module")
+
+def show_shodan_options():
+    print("\nChoose an option:")
+    print("1) Manual Search:")
+    print("2) Search IP single target:")
+    print("3) Back")
+    print("Choose an option: ")
 
 def domain_or_ip():
     print("\nWhat do you want to use?")
