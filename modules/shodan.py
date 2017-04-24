@@ -1,6 +1,6 @@
 from imports import *
 
-SHODAN_API_KEY = ''
+SHODAN_API_KEY = 'uwSeOv3ODv8FQ0SpH2oPOwoYH151hgB4'
 
 api = shodan.Shodan(SHODAN_API_KEY)
 
@@ -9,27 +9,19 @@ def manual_request(query):
         # Search Shodan
         results = api.search(query)
         # Show the results
-        print(colored.green("\n-----------------------------------"))
-        print(colored.green("\nResults found: %s" % results['total'])+"\n")
-        print(results)
+        print(colored.red("\n-----------------------------------"))
+        print(colored.red("\nResults found: %s" % results['total'])+"\n")
+
         for result in results['matches']:
             print(colored.green("IP: %s" % result['ip_str']))
             print(colored.green("Country: %s" % result['location']['country_name']))
             print(colored.green("City: %s" % result['location']['city']))
             print(colored.yellow("Latitude: %s" % result['location']['latitude']))
             print(colored.yellow("Longitude: %s" % result['location']['longitude']))
-            '''
-            print(colored.green("\nPorts:\n"))
-            for item in result['data']:
-                print(
-                    """
-                                Port: %s
-                    """ % item['port']
-                )
-                '''
-            print("\nInformation:\n")
+            print(colored.cyan("\nInformation:\n"))
             print(result['data'])
             print('')
+
     except:
         print (colored.red("Query error"))
 
@@ -39,23 +31,17 @@ def single_target(address):
         host = api.host(address)
 
         # Print general info
-        print(
-        """
-                IP: %s
-                Organization: %s
-                Operating System: %s
-        """ % (host['ip_str'], host.get('org', 'n/a'), host.get('os', 'n/a'))
-        )
-
-        # Print all banners
+        print("\n")
+        print(colored.red("--------------------------------"))
+        print(colored.red("\nInformation:\n"))
+        print(colored.green("IP: %s" % host['ip_str']))
+        print(colored.green("Organization: %s" % host.get('org', 'n/a')))
+        print(colored.green("Operating System: %s" % host.get('os', 'n/a')))
+        print(colored.yellow("\nPorts:\n"))
         for item in host['data']:
-            print(
-            """
-                        Port: %s
-                        Banner: %s
+            print(colored.yellow("Port %s" % item['port']))
+            print("Banner:\n %s" % item['data'])
 
-                """ % (item['port'], item['data'])
-            )
     except:
         print(colored.red("\nNo information was found about this IP"))
 
