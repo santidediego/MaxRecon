@@ -15,7 +15,7 @@ def show_options():
 
 
 def init_shodan():
-    print("Welcome to Shodan module")
+    print("\nWelcome to Shodan module\n")
 
 def show_shodan_options():
     print("\nChoose an option:")
@@ -52,11 +52,11 @@ def ask_for_address():
     return address
 
 def ask_for_network():
-    print("Write a valid network,domain or IP address: ")
+    print("\nWrite a valid network,domain or IP address: ")
     address=input()
     return address
 
 def ask_for_pdf():
-    print("Write the pdf file path, with extension included: ")
+    print("\nWrite the pdf file path, with extension included: ")
     pdf=input()
     return pdf
