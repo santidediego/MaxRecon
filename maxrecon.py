@@ -7,6 +7,8 @@ Python: python 3.5
 from imports import *
 
 def main():
+    f = Figlet(font='slant')
+    print (colored.green(f.renderText('Max Recon')))
     option=0
     while option!='9':
         show_options()

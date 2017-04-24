@@ -8,6 +8,7 @@ import nmap
 import os
 import pprint
 import shodan
+from pyfiglet import Figlet
 from tqdm import tqdm
 from clint.textui import colored
 from modules.interaction import *
