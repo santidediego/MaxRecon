@@ -9,10 +9,25 @@ def manual_request(query):
         # Search Shodan
         results = api.search(query)
         # Show the results
-        print("\n-----------------------------------")
-        print("\nResults found: %s" % results['total'])
+        print(colored.green("\n-----------------------------------"))
+        print(colored.green("\nResults found: %s" % results['total'])+"\n")
+        print(results)
         for result in results['matches']:
-            print("IP: %s" % result['ip_str'])
+            print(colored.green("IP: %s" % result['ip_str']))
+            print(colored.green("Country: %s" % result['location']['country_name']))
+            print(colored.green("City: %s" % result['location']['city']))
+            print(colored.yellow("Latitude: %s" % result['location']['latitude']))
+            print(colored.yellow("Longitude: %s" % result['location']['longitude']))
+            '''
+            print(colored.green("\nPorts:\n"))
+            for item in result['data']:
+                print(
+                    """
+                                Port: %s
+                    """ % item['port']
+                )
+                '''
+            print("\nInformation:\n")
             print(result['data'])
             print('')
     except:
@@ -45,18 +60,18 @@ def single_target(address):
         print(colored.red("\nNo information was found about this IP"))
 
 def shodan_hacking():
-    show_shodan_options()
-    option = input()
-    if option=='1':
-        print("Write your query")
-        query=input()
-        manual_request(query)
-    elif option == '2':
-        address=ask_for_address()
-        single_target(address)
-
-    elif option=='3':
-        pass
+    init_shodan()
+    option=0
+    while option!='3':
+        show_shodan_options()
+        option = input()
+        if option == '1':
+            print("\nWrite your query")
+            query = input()
+            manual_request(query)
+        elif option == '2':
+            address = ask_for_address()
+            single_target(address)
 
 
 
