@@ -2,10 +2,10 @@ from imports import *
 
 def show_options():
         print("\nChoose an option:")
-        print("1) Ask the DNS Server:")
-        print("2) WHOIS Information:")
-        print("3) Geolocate the target:")
-        print("4) Google Hacking:")
+        print("1) Ask the DNS Server")
+        print("2) WHOIS Information")
+        print("3) Geolocate the target")
+        print("4) Google Hacking")
         print("5) Metadata analysis in PDF files")
         print("6) Scan the target")
         print("7) Scan for webcams in a local network")
@@ -20,8 +20,9 @@ def init_shodan():
 def show_shodan_options():
     print("\nChoose an option:")
     print("1) Manual Search:")
-    print("2) Search IP single target:")
-    print("3) Back")
+    print("2) Information about a single target")
+    print("3) Search for webcams")
+    print("4) Back")
     print("Choose an option: ")
 
 def domain_or_ip():

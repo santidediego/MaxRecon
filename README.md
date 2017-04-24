@@ -15,3 +15,8 @@ If you want to use nmap customized mode, you must install it in your computer.
 ## Usage
 
 Just write: ``python maxrecon.py``. Don´t forget using sudo if you want to use the nmap feature.
+
+## Contact
+Twitter: <https://twitter.com/santidediego>
+
+Gmail: <santidediego@gmail.com>

@@ -1,6 +1,6 @@
 from imports import *
 
-SHODAN_API_KEY = 'uwSeOv3ODv8FQ0SpH2oPOwoYH151hgB4'
+SHODAN_API_KEY = ''
 
 api = shodan.Shodan(SHODAN_API_KEY)
 
@@ -45,10 +45,31 @@ def single_target(address):
     except:
         print(colored.red("\nNo information was found about this IP"))
 
+def search_webcams():
+    try:
+        # Search Shodan
+        results = api.search('Server: SQ-WEBCAM')
+        # Show the results
+        print(colored.red("\n-----------------------------------"))
+        print(colored.red("\nResults found: %s" % results['total'])+"\n")
+
+        for result in results['matches']:
+            print(colored.green("IP: %s" % result['ip_str']))
+            print(colored.green("Country: %s" % result['location']['country_name']))
+            print(colored.green("City: %s" % result['location']['city']))
+            print(colored.yellow("Latitude: %s" % result['location']['latitude']))
+            print(colored.yellow("Longitude: %s" % result['location']['longitude']))
+            print(colored.cyan("\nInformation:\n"))
+            print(result['data'])
+            print('')
+
+    except:
+        print (colored.red("Query error"))
+
 def shodan_hacking():
     init_shodan()
     option=0
-    while option!='3':
+    while option!='4':
         show_shodan_options()
         option = input()
         if option == '1':
@@ -58,6 +79,5 @@ def shodan_hacking():
         elif option == '2':
             address = ask_for_address()
             single_target(address)
-
-
-
+        elif option == '3':
+            search_webcams()
