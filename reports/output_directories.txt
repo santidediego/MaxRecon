@@ -1,0 +1,86 @@
+"Directory Listing for" "Hosted by Xerver" site:localhost
+"Index Of /network" "last modified" site:localhost
+"Index of /backup" site:localhost
+"Index of" rar r01 nfo Modified 2004 site:localhost
+"More Info about MetaCart Free" site:localhost
+"Powered by Invision Power File Manager" (inurl:login.php) | (intitle:"Browsing directory /" ) site:localhost
+"Warning: Installation directory exists at" "Powered by Zen Cart" -demo site:localhost
+"Web File Browser" "Use regular expression" site:localhost
+"Welcome to phpMyAdmin" " Create new database" site:localhost
+"Welcome to the directory listing of" "NetworkActiv-Web-Server" site:localhost
+"index of cgi-bin" site:localhost
+"index of" / picasa.ini site:localhost
+"index of" inurl:recycler site:localhost
+"intitle:Index.Of /" stats merchant cgi-* etc site:localhost
+Directory Listing for "Hosted by Xerver" site:localhost
+Index Of /network "last modified" site:localhost
+Index of /backup site:localhost
+Index of rar r01 nfo Modified 2004 site:localhost
+More Info about MetaCart Free site:localhost
+POWERED BY HIT JAMMER 1.0! site:localhost
+Powered by Invision Power File Manager (inurl:login.php) | (intitle:"Browsing directory /" ) site:localhost
+Warning: Installation directory exists at "Powered by Zen Cart" -demo site:localhost
+Web File Browser "Use regular expression" site:localhost
+Welcome to phpMyAdmin " Create new database" site:localhost
+Welcome to the directory listing of "NetworkActiv-Web-Server" site:localhost
+allintext:"WebServerX Server at" site:localhost
+allintitle:"FirstClass Login" site:localhost
+allinurl:"/*/_vti_pvt/" | allinurl:"/*/_vti_cnf/" site:localhost
+filetype:cfg ks intext:rootpw -sample -test  -howto site:localhost
+filetype:ini Desktop.iniintext:mydocs.dll site:localhost
+filetype:torrent torrent site:localhost
+index of / picasa.ini site:localhost
+index of cgi-bin site:localhost
+index of inurl:recycler site:localhost
+index.of.dcim site:localhost
+index.of.password site:localhost
+index.of.private site:localhost
+index.of.protected site:localhost
+index.of.secret site:localhost
+index.of.secure site:localhost
+index.of.winnt site:localhost
+intext:"Powered By: TotalIndex" intitle:"TotalIndex" site:localhost
+intext:"Powered by X-Cart: shopping cart software" -site:x-cart.com site:localhost
+intext:"d.aspx?id" || inurl:"d.aspx?id" site:localhost
+intext:"powered by Hosting Controller" intitle:Hosting.Controller site:localhost
+intitle:"Backup-Management (phpMyBackup v.0.4 beta * )" -johnny.ihackstuff site:localhost
+intitle:"Directory Listing For" intext:Tomcat -int site:localhost
+intitle:"Folder Listing" "Folder Listing" Name Size Date/Time File Folder site:localhost
+intitle:"HFS /" +"HttpFileServer" site:localhost
+intitle:"Index of *" inurl:"my shared folder" size modified site:localhost
+intitle:"Index of /CFIDE/" administrator site:localhost
+intitle:"Index of c:\Windows" site:localhost
+intitle:"Index of" cfide site:localhost
+intitle:"album permissions" "Users who can modify photos" "EVERYBODY" site:localhost
+intitle:"index of /phpmyadmin" modified site:localhost
+intitle:"index of" "parent directory" "desktop.ini" site:dyndns.org site:localhost
+intitle:"index of" -inurl:htm -inurl:html mp3 site:localhost
+intitle:"index of" intext:"content.ie5" site:localhost
+intitle:"index of" inurl:ftp (pub | incoming) site:localhost
+intitle:"index.of.personal" site:localhost
+intitle:"pictures thumbnails" site:pictures.sprintpcs.com site:localhost
+intitle:"webadmin - /*" filetype:php directory filename permission site:localhost
+intitle:Index.Of / stats merchant cgi-* etc site:localhost
+intitle:index.of (inurl:fileadmin | intitle:fileadmin) site:localhost
+intitle:index.of /AlbumArt_ site:localhost
+intitle:index.of /maildir/new/ site:localhost
+intitle:index.of WEB-INF site:localhost
+intitle:index.of abyss.conf site:localhost
+intitle:index.of cisco asa -site:cisco.com site:localhost
+intitle:index.of ios -site:cisco.com site:localhost
+intitle:index.of.config site:localhost
+intitle:intranet inurl:intranet +intext:"human resources" site:localhost
+intitle:upload inurl:upload intext:upload -forum -shop -support -w3c site:localhost
+inurl:"/database/comersus.mdb" site:localhost
+inurl:"shopadmin.asp" "Shop Administrators only" site:localhost
+inurl:/pls/sample/admin_/help/ site:localhost
+inurl:/tmp site:localhost
+inurl:backup intitle:index.of inurl:admin site:localhost
+inurl:explorer.cfm inurl:(dirpath|This_Directory) site:localhost
+inurl:install.pl intext:"Reading path paramaters" -edu site:localhost
+inurl:j2ee/examples/jsp site:localhost
+inurl:midicart.mdb site:localhost
+inurl:ojspdemos site:localhost
+inurl:shopdbtest.asp site:localhost
+log inurl:linklint filetype:txt -"checking" site:localhost
+site:ups.com intitle:"Ups Package tracking" intext:"1Z ### ### ## #### ### #" site:localhost
