@@ -19,7 +19,7 @@ from modules.geolocate import *
 from modules.dns_query import *
 from modules.whois_query import *
 from modules.pdf_metadata import *
-from modules.google_hacking import *
+from modules.googlehacking.google_hacking import *
 from modules.cam_detector import *
 from modules.scanner import *
 from modules.shodan import *
