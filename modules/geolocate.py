@@ -6,12 +6,12 @@ def geolocate():
     city = pygeoip.GeoIP('Data/GeoLiteCity.dat')
     address=ask_for_address()
     try:
-        print("\nCountry:\n")
-        print(country.country_name_by_addr(address) + "Code: "+country.country_code_by_addr(address)+"\n")
-        print("\nCity:\n")
-        pprint.pprint(city.record_by_addr(address))
+        print(colored.green("\nCountry: "+country.country_name_by_addr(address)))
+        print(colored.green("City: %s" % city.record_by_addr(address)['city']))
+        print(colored.yellow("Latitude: %s" % city.record_by_addr(address)['latitude']))
+        print(colored.yellow("Longitude: %s" % city.record_by_addr(address)['longitude']))
     except:
-        print("No valid IP, something was wrong")
+        print(colored.red("\nNo valid IP, something was wrong\n"))
         return
     print (colored.yellow("\n<Enter>\n"))
     input()
