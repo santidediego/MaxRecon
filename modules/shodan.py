@@ -4,6 +4,19 @@ SHODAN_API_KEY = ''
 
 api = shodan.Shodan(SHODAN_API_KEY)
 
+def init_shodan():
+    print(colored.green("\n##########################"))
+    print(colored.green("\nWelcome to Shodan module\n"))
+    print(colored.green("##########################\n"))
+
+def show_shodan_options():
+    print("\nChoose an option:")
+    print("1) Manual Search:")
+    print("2) Information about a single target")
+    print("3) Search for webcams")
+    print("4) Back")
+    print("Choose an option: ")
+
 def manual_request(query):
     try:
         # Search Shodan

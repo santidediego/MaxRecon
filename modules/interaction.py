@@ -13,18 +13,6 @@ def show_options():
         print("9) Exit")
         print("Choose an option: ")
 
-
-def init_shodan():
-    print("\nWelcome to Shodan module\n")
-
-def show_shodan_options():
-    print("\nChoose an option:")
-    print("1) Manual Search:")
-    print("2) Information about a single target")
-    print("3) Search for webcams")
-    print("4) Back")
-    print("Choose an option: ")
-
 def domain_or_ip():
     print("\nWhat do you want to use?")
     print("1) IP")

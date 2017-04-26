@@ -1,0 +1,25 @@
+intext:"Icecast Administration Admin Page" intitle:"Icecast Administration Admin Page" site:cmisabel.ugr.es
+intitle:"remote assessment" OpenAanval Console site:cmisabel.ugr.es
+intitle:opengroupware.org "resistance is obsolete" "Report Bugs" "Username" "password" site:cmisabel.ugr.es
+"4images Administration Control Panel" site:cmisabel.ugr.es
+"Emergisoft web applications are a part of our" site:cmisabel.ugr.es
+"Establishing a secure Integrated Lights Out session with" OR intitle:"Data Frame - Browser not HTTP 1.1 compatible" OR intitle:"HP Integrated Lights- site:cmisabel.ugr.es
+"HostingAccelerator" intitle:"login" +"Username" -"news" -demo site:cmisabel.ugr.es
+"IMail Server Web Messaging" intitle:login site:cmisabel.ugr.es
+"Login - Sun Cobalt RaQ" site:cmisabel.ugr.es
+"Login to Usermin" inurl:20000 site:cmisabel.ugr.es
+"Microsoft CRM : Unsupported Browser Version" site:cmisabel.ugr.es
+"OPENSRS Domain Management" inurl:manage.cgi site:cmisabel.ugr.es
+"Please authenticate yourself to get access to the management interface" site:cmisabel.ugr.es
+"Please login with admin pass" -"leak" -sourceforge site:cmisabel.ugr.es
+"Powered by DWMail" password intitle:dwmail site:cmisabel.ugr.es
+"Powered by Merak Mail Server Software" -.gov -.mil -.edu -site:merakmailserver.com -johnny.ihackstuff site:cmisabel.ugr.es
+"Powered by Midmart Messageboard" "Administrator Login" site:cmisabel.ugr.es
+"Powered by Monster Top List" MTL numrange:200- site:cmisabel.ugr.es
+"Powered by UebiMiau" -site:sourceforge.net site:cmisabel.ugr.es
+"Remote Supervisor Adapter II" inurl:userlogin_logo.ssi site:cmisabel.ugr.es
+"SquirrelMail version" "By the SquirrelMail Development Team" site:cmisabel.ugr.es
+"SurgeMAIL" inurl:/cgi/user.cgi ext:cgi site:cmisabel.ugr.es
+"SysCP - login" site:cmisabel.ugr.es
+"This is a restricted Access Server" "Javascript Not Enabled!"|"Messenger Express" -edu -ac site:cmisabel.ugr.es
+"This section is for Administrators only. If you are an administrator then please" site:cmisabel.ugr.es
