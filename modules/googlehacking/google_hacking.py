@@ -7,7 +7,7 @@ def init_google():
     print (colored.green("###########################################\n"))
 
 def show_google_options():
-    print("Choose an option: ")
+    print("\nChoose an option: ")
     print ("1) Search for directories")
     print ("2) Search for configuration files")
     print ("3) Search for databases")
@@ -17,12 +17,13 @@ def show_google_options():
     print ("7) Search for SQL vulnerabilities")
     print ("8) Search for exposed doc files")
     print ("9) Search for php_info")
-    print ("10) Back")
+    print ("10) Generate google queries for manual gathering")
+    print ("11) Back")
 
 def googlehacking():
     init_google()
     option = 0
-    while option != '10':
+    while option != '11':
         show_google_options()
         option=input()
         if option=='1':
@@ -105,5 +106,20 @@ def googlehacking():
             except:
                 pass
 
+        elif option == '10':
+            address = domain_or_ip()
+            try:
+                command=os.system("python scripts/googleDB-tool.py vulnerabilities.txt -s "+address+" -o reports/output_vul.txt ")
+                command=os.system("python scripts/googleDB-tool.py login_pages.txt -s "+address+" -o reports/output_logins.txt ")
+                command=os.system("python scripts/googleDB-tool.py interesting_directories.txt -s "+address+" -o reports/output_directories.txt ")
+                command=os.system("python scripts/googleDB-tool.py sql_injection_list.txt -s "+address+" -o reports/output_sql-injection.txt ")
+            except:
+                pass
+
+            print(colored.yellow("\nFile(s) correctly saved in reports/"))
+            print (colored.yellow("\n<Enter>\n"))
+            input()
+        elif option=='11':
+            pass
         else:
             print("Please, select a correct option")
