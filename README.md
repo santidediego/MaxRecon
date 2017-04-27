@@ -1,5 +1,9 @@
 # MaxRecon
 
+Copyright 2017 MaxRecon
+
+Written by: Santiago de Diego
+
 Suite for Information Gathering written in **python 3.5**.
 
 This tool automates some steps of Information Gathering from a target
