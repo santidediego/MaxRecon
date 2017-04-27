@@ -8,3 +8,4 @@ ipwhois==0.15.1
 clint==0.5.1
 shodan==1.5.4
 google==1.9.3
+wafw00f==0.9.4

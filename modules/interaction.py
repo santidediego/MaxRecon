@@ -10,7 +10,8 @@ def show_options():
         print("6) Scan the target")
         print("7) Scan for webcams in a local network")
         print("8) Shodan Hacking")
-        print("9) Exit")
+        print("9) Check if there is an IDS protecting the site")
+        print("10) Exit")
         print("Choose an option: ")
 
 def domain_or_ip():

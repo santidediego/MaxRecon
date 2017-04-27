@@ -23,3 +23,4 @@ from modules.googlehacking.google_hacking import *
 from modules.cam_detector import *
 from modules.scanner import *
 from modules.shodan import *
+from modules.ids_checker import *

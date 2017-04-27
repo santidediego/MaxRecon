@@ -10,7 +10,7 @@ def main():
     f = Figlet(font='slant')
     print (colored.green(f.renderText('Max Recon')))
     option=0
-    while option!='9':
+    while option!='10':
         show_options()
         option=input()
         if option=='1':
@@ -29,4 +29,6 @@ def main():
             cam()
         elif option=='8':
             shodan_hacking()
+        elif option=='9':
+            check_ids()
 main()
