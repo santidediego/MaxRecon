@@ -12,6 +12,10 @@ The module Google Hacking uses the tool: [Google Hack Database Tool](https://www
 
 # Installation
 
+``git clone git@github.com:santidediego/MaxRecon.git && cd MaxRecon && git submodule init && git submodule update``
+
+After we can install requirements with:
+
 ``pip install -r requirements.txt``
 
 If you want to use nmap customized mode, you must install it in your computer.
