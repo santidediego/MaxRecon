@@ -62,11 +62,31 @@ def search_webcams():
     try:
         # Search Shodan
         results = api.search('Server: SQ-WEBCAM')
+        results2 = api.search('linux upnp avtech')
+        results3 = api.search('netcam')
         # Show the results
         print(colored.red("\n-----------------------------------"))
         print(colored.red("\nResults found: %s" % results['total'])+"\n")
 
         for result in results['matches']:
+            print(colored.green("IP: %s" % result['ip_str']))
+            print(colored.green("Country: %s" % result['location']['country_name']))
+            print(colored.green("City: %s" % result['location']['city']))
+            print(colored.yellow("Latitude: %s" % result['location']['latitude']))
+            print(colored.yellow("Longitude: %s" % result['location']['longitude']))
+            print(colored.cyan("\nInformation:\n"))
+            print(result['data'])
+            print('')
+        for result in results2['matches']:
+            print(colored.green("IP: %s" % result['ip_str']))
+            print(colored.green("Country: %s" % result['location']['country_name']))
+            print(colored.green("City: %s" % result['location']['city']))
+            print(colored.yellow("Latitude: %s" % result['location']['latitude']))
+            print(colored.yellow("Longitude: %s" % result['location']['longitude']))
+            print(colored.cyan("\nInformation:\n"))
+            print(result['data'])
+            print('')
+        for result in results3['matches']:
             print(colored.green("IP: %s" % result['ip_str']))
             print(colored.green("Country: %s" % result['location']['country_name']))
             print(colored.green("City: %s" % result['location']['city']))
