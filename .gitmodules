@@ -1,3 +1,3 @@
 [submodule "modules/wafw00f"]
 	path = modules/wafw00f
-	url = git@github.com:EnableSecurity/wafw00f.git
+	url = https://github.com/EnableSecurity/wafw00f.git
