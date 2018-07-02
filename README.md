@@ -12,7 +12,7 @@ The module Google Hacking uses the tool: [Google Hack Database Tool](https://www
 
 # Installation
 
-``git clone git@github.com:santidediego/MaxRecon.git && cd MaxRecon && git submodule init && git submodule update``
+``git clone https://github.com/santidediego/MaxRecon && cd MaxRecon && git submodule init && git submodule update``
 
 After we can install requirements with:
 
